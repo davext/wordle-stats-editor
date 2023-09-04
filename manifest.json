@@ -1,0 +1,22 @@
+{
+  "name": "Wordle Stats Editor",
+  "manifest_version": 3,
+  "version": "1.0",
+  "description": "Edit your Wordle game stats.",
+  "permissions": ["tabs", "activeTab", "storage","scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.nytimes.com/games/wordle/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://www.nytimes.com/"
+],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
