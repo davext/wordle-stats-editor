@@ -1,5 +1,6 @@
 # Wordle Stats Editor
 
+![Wordle Stats Editor](/screenshots/w2.jpg)
 
 ## Overview
 
