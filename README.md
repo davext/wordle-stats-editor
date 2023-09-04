@@ -1,6 +1,5 @@
 # Wordle Stats Editor
 
-![Wordle Stats Editor]
 
 ## Overview
 
