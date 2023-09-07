@@ -17,7 +17,7 @@ The Wordle Stats Editor is a Chrome extension that allows Wordle enthusiasts to 
 
 ### From Chrome Web Store
 
-1. Visit the [Chrome Web Store](https://link/to/chrome/web/store/page)
+1. Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/wordle-stats-editor/gabgedpidmjnlikepcecolkifcmkofhh)
 2. Click "Add to Chrome" to install the extension.
 
 ### From GitHub
