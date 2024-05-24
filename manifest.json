@@ -1,22 +1,21 @@
 {
   "name": "Wordle Stats Editor",
   "manifest_version": 3,
-  "version": "1.0",
+  "version": "2.0",
   "description": "Edit your Wordle game stats.",
-  "permissions": ["tabs", "activeTab", "storage","scripting"],
+  "permissions": ["tabs", "activeTab", "scripting", "cookies"],
   "content_scripts": [
     {
-      "matches": ["https://www.nytimes.com/games/wordle/*"],
-      "js": ["content.js"]
+      "js": ["src/Utils/content.js"],
+      "matches": ["https://*.nytimes.com/*"]
     }
   ],
-  "host_permissions": [
-    "https://www.nytimes.com/"
-],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "src/Utils/background.js"
   },
-  "action": {
-    "default_popup": "popup.html"
+  "host_permissions": ["https://*.nytimes.com/*"],
+  "action": { "default_popup": "index.html" },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://cdn.jsdelivr.net/;"
   }
 }
