@@ -48,6 +48,8 @@ export const SubmitNewStats = ({ gameData }) => {
         data: data,
       });
     });
+
+    window.close();
   };
 
   // DEBUGGING CODE

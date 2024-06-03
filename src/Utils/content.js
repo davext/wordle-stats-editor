@@ -79,9 +79,13 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       body: JSON.stringify(data),
     }).then((response) => {
       console.log(response);
-      sendResponse("Data submitted successfully");
+      sendResponse({
+        status: "success",
+      });
       //show alert
       alert("Data submitted successfully");
+      //close the extension popup
+      chrome.runtime.sendMessage({ action: "closePopup" });
       //reload the page
       window.location.reload();
     });
