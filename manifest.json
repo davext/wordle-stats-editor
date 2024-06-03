@@ -3,7 +3,7 @@
   "manifest_version": 3,
   "version": "2.0",
   "description": "Edit your Wordle game stats.",
-  "permissions": ["tabs", "activeTab", "scripting", "cookies"],
+  "permissions": [],
   "content_scripts": [
     {
       "js": ["src/Utils/content.js"],
@@ -14,8 +14,5 @@
     "service_worker": "src/Utils/background.js"
   },
   "host_permissions": ["https://*.nytimes.com/*"],
-  "action": { "default_popup": "index.html" },
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://cdn.jsdelivr.net/;"
-  }
+  "action": { "default_popup": "index.html" }
 }
