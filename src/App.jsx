@@ -1,9 +1,9 @@
-import { useState, useContext, useEffect } from "react";
-import { SubmitNewStats } from "./Components/SubmitNewStats";
-import { NotWordleTab } from "./Components/NotWordleTab";
-import { Disclaimer } from "./Components/Disclaimer";
-import { StatsContext } from "./Components/useStats";
+import { useContext, useEffect, useState } from "react";
 import "./App.css";
+import { Disclaimer } from "./Components/Disclaimer";
+import { NotWordleTab } from "./Components/NotWordleTab";
+import { SubmitNewStats } from "./Components/SubmitNewStats";
+import { StatsContext } from "./Components/useStats";
 
 function App() {
   //check if current tab is wordle or not
@@ -54,7 +54,16 @@ function App() {
       {gameData ? (
         <SubmitNewStats gameData={gameData} />
       ) : (
-        <p>Loading... Open me in a second. Or play a game first.</p>
+        <div className="loading-container">
+          <div className="loading-spinner"></div>
+          <p className="loading-text">Loading Wordle data...</p>
+          <p className="loading-subtext">
+            If loading persists, try refreshing the page or signing out and back
+            in.
+            <br />
+            <span className="blame-text">(blame NYT for this 🙄)</span>
+          </p>
+        </div>
       )}
       <Disclaimer />
     </div>
